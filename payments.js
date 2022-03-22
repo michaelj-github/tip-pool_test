@@ -68,7 +68,8 @@ function updateSummary() {
   if (paymentTotal === 0 && numberOfPayments === 0) {
     tipPercentAvg = 0;
   } else {
-    tipPercentAvg = paymentTotal / Object.keys(allPayments).length;
+    // tipPercentAvg = paymentTotal / Object.keys(allPayments).length;
+    tipPercentAvg = paymentTotal / numberOfPayments;
   }
 
   summaryTds[0].innerHTML = '$' + sumPaymentTotal('billAmt');

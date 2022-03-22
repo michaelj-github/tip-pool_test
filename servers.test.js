@@ -12,20 +12,21 @@ describe("Servers test (with setup and tear-down)", function() {
 
   it('should add a new server to allServers on updateServerTable()', function() {
     let serverId = 1;
-    let serverName = 'Robert';
+    let serverName = 'Alice';
     allServers['server' + serverId] = {
       serverName
     };
     updateServerTable();
     expect(Object.keys(allServers).length).toEqual(1);
-    expect(allServers['server' + serverId].serverName).toEqual('Robert');
-
+    expect(allServers['server' + serverId].serverName).toEqual('Alice');
   });
 
   afterEach(function() {
     // teardown logic
     // document.getElementById("serverTable").remove(); // removes all rows including the header
-    document.getElementById("serverTable").deleteRow(1);
+    // document.getElementById("serverTable").deleteRow(1);
     serverNameInput.value = '';
+    serverTbody.innerHTML = '';
+    allServers = {};
   });
 });
