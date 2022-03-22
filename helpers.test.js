@@ -47,7 +47,6 @@ it('should convert the bill and tip amount into a tip percent on calculateTipPer
     appendTd(testTr, 'testTr');
     expect(testTr.children.length).toEqual(1);
     expect(testTr.firstChild.innerHTML).toEqual('testTr');
-        // expect(true).toEqual(true);
   });
 
   afterEach(function() {
